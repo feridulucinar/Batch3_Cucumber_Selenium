@@ -1,23 +1,24 @@
+@regression
 Feature: Navigation Menu
 
-  Scenario: Navigation to Developers menu
+  Background:
     Given The user is on the login page
+
+  Scenario: Navigation to Developers menu
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to see Dashboard text
     And The user navigates to Developer menu
     Then The user able to see Developers text
 
-
+  @second
   Scenario: Navigation to Forms Input menu
-    Given The user is on the login page
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to see Dashboard text
     And The user navigates to Forms Input menu
     Then The user able to see General Form Elements - Input text
 
-
+  @smoke
   Scenario: Navigation to My Profile menu
-    Given The user is on the login page
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to see Dashboard text
     And The user navigates to My Profile menu

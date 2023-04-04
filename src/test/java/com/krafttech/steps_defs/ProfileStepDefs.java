@@ -12,7 +12,7 @@ public class ProfileStepDefs {
     public void user_should_go_to_my_profile_with(String tabName) {
         DashboardPage dashboardPage = new DashboardPage();
         dashboardPage.navigateToModule(tabName,"My Profile");
-        BrowserUtils.waitFor(3);
+//        BrowserUtils.waitFor(3);
 
     }
 

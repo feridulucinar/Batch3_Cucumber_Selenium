@@ -33,7 +33,7 @@ public abstract class BasePage {
     public void navigateToModule(String tab, String module) {
 
         String tabLoc = "//span[.='" + tab + "']";
-        String moduleLoc = "//span[.='" + module + "']";
+        String moduleLoc = "//span[.='"+tab+"']/../../ul/li[.='"+module+"']";
 
         BrowserUtils.waitForClickablility(By.xpath(tabLoc), 5);
         WebElement tabElement = Driver.get().findElement(By.xpath(tabLoc));
@@ -47,6 +47,10 @@ public abstract class BasePage {
 
     public String getAccountName(String accountName){
         return Driver.get().findElement(By.xpath("//span[.='"+accountName+"']")).getText();
+    }
+
+    public String getAccountName(){
+        return userAccountName.getText();
     }
 
 }
