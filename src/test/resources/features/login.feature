@@ -12,7 +12,7 @@ Feature: Login
   Background:
     Given The user is on the login page
 
-  @teacher @krafttech @smoke
+  @teacher @krafttech @smoke @parallel @grid
   Scenario: Login as Mike
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to login

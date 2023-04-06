@@ -13,7 +13,7 @@ public class Hooks {
     @Before
     public void setUp(){
 //        Driver.get().manage().window().maximize();
-        Driver.get().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+//        Driver.get().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
         System.out.println("\tThis is coming from Before method");
     }
 

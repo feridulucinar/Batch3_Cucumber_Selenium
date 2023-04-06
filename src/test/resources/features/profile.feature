@@ -1,5 +1,6 @@
 Feature: Profile Tests
-  @scenario
+
+  @scenario @parallel
   Scenario: User should be able to edit his/her profile
     Given The user is on the login page
     When The user logs in using "john@gmail.com" and "John1234."
